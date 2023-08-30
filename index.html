@@ -758,11 +758,13 @@
     <script src="assets/js/owl.carousel.min.js"></script>
 
     <!-- extranal js file -->
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
   
 
-    <!-- isotope js -->
+ 
     <script>
+
+      // <!-- isotope js -->
       // init Isotope
       var $grid = $(".grids").isotope({
         layoutMode: "fitRows",
@@ -796,6 +798,55 @@
           $(this).addClass("is-checked");
         });
       });
+
+
+      // carousel js
+
+      $('.carousel-one').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+// carousel two
+
+$('.carousel-two').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+// countter up js
+
+$('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
+
     </script>
   </body>
 </html>
